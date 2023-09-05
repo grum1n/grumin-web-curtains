@@ -1,5 +1,32 @@
 
+#   controller
+
+    php artisan make:model Page -mcr -R
+
+    php artisan make:model Contact -mcr -R
+
+#   components
+
+    php artisan make:component Backend/Header
+
+    php artisan make:component Backend/Sidebar
+
+    php artisan make:component Backend/MainContainer
+
+    php artisan make:component Backend/Breadcrumb
+
+    php artisan make:component Backend/ErrorMsg
+
+#    colors
+
+    //*  dashboard:
+
+    //natural-300
+    //amber-200
+    //teal-500
+    //teal-950
 -----------------
+
 #   install 
 
     https://jetstream.laravel.com/introduction.html
