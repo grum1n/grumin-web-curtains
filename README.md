@@ -1,9 +1,13 @@
 
-#   controller
+#   model-migration-controller-resource-request
 
     php artisan make:model Page -mcr -R
 
     php artisan make:model Contact -mcr -R
+
+    php artisan make:model Gallery -mcr -R
+
+    php artisan make:model Message -mcr -R
 
 #   components
 
