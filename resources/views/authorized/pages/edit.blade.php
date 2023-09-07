@@ -40,6 +40,13 @@
                     <input type="text" id="content_layout_name" name="content_layout_name" value="{{ $page->content_layout_name }}"  placeholder="Not required" class="mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none border-gray-200">
                     <x-backend.error-msg name="content_layout_name" />
                 </div>
+
+                <div class="mb-3">
+                    <label for="description" class="text-sm text-navy-700 dark:text-gray-500 font-bold">Description</label>
+                    <input type="text" id="description" name="description" value="{{ $page->description }}" class="mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none border-gray-200">
+                    <x-backend.error-msg name="description" />
+                </div>
+
                 <button type="submit" class="middle none center rounded-lg bg-blue-500 py-1 px-6 font-sans text-ss font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">
                     Update</button>
 

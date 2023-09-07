@@ -24,6 +24,7 @@ class StorePageRequest extends FormRequest
         return [
             'name' => 'required|string|min:2|max:50',
             'content_layout_name' => 'nullable|string|max:50',
+            'description' => 'nullable|string|max:120',
         ];
     }
 }

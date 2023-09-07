@@ -15,8 +15,9 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        $images = Gallery::orderBy('id', 'desc')->paginate(2);
-        return view('authorized.gallery.index', compact('images'));
+        $images = Gallery::orderBy('id', 'desc')->paginate(9);
+        $pages = Page::all();
+        return view('authorized.gallery.index', compact('images', 'pages'));
     }
 
     /**
@@ -104,6 +105,7 @@ class GalleryController extends Controller
      */
     public function destroy(Gallery $gallery)
     {
+        $itemId = $gallery->id;
         $item = $gallery->title;
         if (File::exists("images/gallery/" . $gallery->cover)) {
             File::delete("images/gallery/" . $gallery->cover);
@@ -114,7 +116,7 @@ class GalleryController extends Controller
 
         $gallery->delete();
 
-        session()->flash('message', $item . ' successfully deleted');
+        session()->flash('message', $item . ' with id : ' . $itemId . ' successfully deleted');
         
         return redirect()->route('gallery.index');
     }

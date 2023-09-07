@@ -50,7 +50,6 @@
                 <div class="mb-3">
                     <label for="status" class="text-sm text-navy-700 dark:text-gray-500 font-bold">Status</label>
                     <select name="status" id="status"  class="mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 px-3 py-1 text-sm outline-none border-gray-200">
-                        
                         <option value="">Please select status</option>
                         <option value="not active" {{ old('status') == 'not active' ? 'selected' : '' }}>Not active</option>
                         <option value="active" {{ old('status') == 'active' ? 'selected' : '' }}>Active</option>
@@ -64,7 +63,7 @@
                         
                         <option value="">Select page name</option>
                         @foreach($pages as $page)
-                            <option value="{{ $page->id }}" {{ old('page_id') == $page->id ? 'selected' : '' }} class="text-navy-700 dark:text-gray-500">{{ $page->title }}</option>
+                            <option value="{{ $page->id }}" {{ old('page_id') == $page->id ? 'selected' : '' }} class="text-navy-700 dark:text-gray-500">{{ $page->name }}</option>
                         @endforeach
 
                     </select>

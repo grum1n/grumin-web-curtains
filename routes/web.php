@@ -1,12 +1,21 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\GalleryController;
-use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+Route::controller(HomeController::class)->group(function () {
+    Route::get('/', 'index')->name('home');
+    Route::get('/about', 'about')->name('about');
+    Route::get('/services', 'services')->name('services');
+    Route::get('/frontend/pages/{page}', 'singlePage')->name('frontendNavLink');
+    Route::get('/main-gallery', 'frontendGallery')->name('frontendGallery');
+    Route::get('/contact', 'contact')->name('contact');
+});
+
+Route::get('/welcome', function () {
     return view('welcome');
 });
 

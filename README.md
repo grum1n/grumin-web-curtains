@@ -1,4 +1,8 @@
 
+#   controllers
+
+    php artisan make:controller Frontend/HomeController
+
 #   model-migration-controller-resource-request
 
     php artisan make:model Page -mcr -R
@@ -7,7 +11,7 @@
 
     php artisan make:model Gallery -mcr -R
 
-    php artisan make:model Message -mcr -R
+    php artisan make:migration add_description_to_pages_table --table=pages
 
 #   components
 
@@ -20,6 +24,16 @@
     php artisan make:component Backend/Breadcrumb
 
     php artisan make:component Backend/ErrorMsg
+
+    php artisan make:component Frontend/Navbar
+
+    php artisan make:component Frontend/Footer
+
+    php artisan make:component Frontend/AppLogo
+
+    php artisan make:component Frontend/Hero
+
+    php artisan make:component Frontend/SmallHero
 
 #    colors
 

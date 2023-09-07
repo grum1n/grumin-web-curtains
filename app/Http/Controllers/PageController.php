@@ -35,6 +35,7 @@ class PageController extends Controller
         Page::create([
             'name' => $request->input('name'),
             'content_layout_name' => $request->input('content_layout_name'),
+            'description' => $request->input('description'),
         ]);
 
         return redirect()->route('pages.index');
@@ -58,6 +59,7 @@ class PageController extends Controller
         $page->update([
             'name' => $request->input('name'),
             'content_layout_name' => $request->input('content_layout_name'),
+            'description' => $request->input('description'),
         ]);
 
         return redirect()->route('pages.index');

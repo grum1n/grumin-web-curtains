@@ -119,6 +119,15 @@
                                                         </div>
                                                     </div>
 
+                                                    <div class="mt-2 pt-3">
+                                                        @foreach($pages as $page)
+                                                            @if($page->id == $image->page_id)
+                                                                Page : {{ $page->name }} ( {{ $page->content_layout_name }} )
+                                                            @endif
+
+                                                        @endforeach
+                                                    </div>
+
                                                     <div class="mt-2 border-t border-b border-gray-200 pt-3 h-32 line-clamp-1">
                                                         {{ $image->description }}
                                                     </div>

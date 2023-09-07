@@ -66,13 +66,13 @@
 
                 <div class="mb-3">
                     <label for="phone_number_1" class="text-sm text-navy-700 dark:text-gray-500 font-bold">Phone number 1</label>
-                    <input type="number" id="phone_number_1" name="phone_number_1" :value="old('phone_number_1')" placeholder="" class="mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none border-gray-200">
+                    <input type="text" id="phone_number_1" name="phone_number_1" :value="old('phone_number_1')" placeholder="" class="mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none border-gray-200">
                     <x-backend.error-msg name="phone_number_1" />
                 </div>
 
                 <div class="mb-3">
                     <label for="phone_number_2" class="text-sm text-navy-700 dark:text-gray-500 font-bold">Phone number 2</label>
-                    <input type="number" id="phone_number_2" name="phone_number_2" :value="old('phone_number_2')" placeholder="" class="mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none border-gray-200">
+                    <input type="text" id="phone_number_2" name="phone_number_2" :value="old('phone_number_2')" placeholder="" class="mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none border-gray-200">
                     <x-backend.error-msg name="phone_number_2" />
                 </div>
 

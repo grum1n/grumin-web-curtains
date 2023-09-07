@@ -18,7 +18,7 @@
 
     <x-backend.main-container>
     
-    <div class="mt-4 mx-4">
+        <div class="mt-4 mx-4">
             <div class="w-full overflow-hidden rounded-lg shadow-xs">
                 <div class="w-full overflow-x-auto">
 
@@ -62,6 +62,10 @@
                                                     {{ $page->id }}. {{ $page->name }}
                                                     @if($page->content_layout_name != 0) 
                                                         <span class="pl-4">(content: {{ $page->content_layout_name }} )</span>
+                                                    @endif
+
+                                                    @if($page->description != 0) 
+                                                        <span class="pl-4">(desc: {{ $page->description }} )</span>
                                                     @endif
                                                 </p>
                                             </div>
