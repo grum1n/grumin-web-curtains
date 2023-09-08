@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\AboutPage;
 use App\Models\Contact;
 use App\Models\Gallery;
 use App\Models\Page;
@@ -27,7 +28,8 @@ class HomeController extends Controller
 
     public function about()
     {
-        return view('frontend.about');
+        $aboutInfo = AboutPage::all();
+        return view('frontend.about', compact('aboutInfo'));
     }
 
     public function services()

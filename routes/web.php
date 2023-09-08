@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutPageController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\GalleryController;
@@ -8,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index')->name('home');
-    Route::get('/about', 'about')->name('about');
+    Route::get('/frontend/pages/about', 'about')->name('navAbout');
     Route::get('/services', 'services')->name('services');
     Route::get('/frontend/pages/{page}', 'singlePage')->name('frontendNavLink');
     Route::get('/main-gallery', 'frontendGallery')->name('frontendGallery');
@@ -29,4 +30,6 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::resource('contacts', ContactController::class);
 
     Route::resource('gallery', GalleryController::class);
+
+    Route::resource('about', AboutPageController::class);
 });

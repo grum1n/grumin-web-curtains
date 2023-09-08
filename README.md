@@ -13,6 +13,8 @@
 
     php artisan make:migration add_description_to_pages_table --table=pages
 
+    php artisan make:model AboutPage -mcr -R
+
 #   components
 
     php artisan make:component Backend/Header
