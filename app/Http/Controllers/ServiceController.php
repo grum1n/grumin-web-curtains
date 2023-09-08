@@ -2,20 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\AboutPage;
-use App\Http\Requests\StoreAboutPageRequest;
-use App\Http\Requests\UpdateAboutPageRequest;
+use App\Models\Service;
+use App\Http\Requests\StoreServiceRequest;
+use App\Http\Requests\UpdateServiceRequest;
 use Illuminate\Support\Facades\File;
 
-class AboutPageController extends Controller
+class ServiceController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $aboutPages = AboutPage::all();
-        return view('authorized.about.index', compact('aboutPages'));
+        $services = Service::all();
+        return view('authorized.services.index', compact('services'));
     }
 
     /**
@@ -23,13 +23,13 @@ class AboutPageController extends Controller
      */
     public function create()
     {
-        return view('authorized.about.create');
+        return view('authorized.services.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreAboutPageRequest $request)
+    public function store(StoreServiceRequest $request)
     {
         $request->validated();
 
@@ -38,7 +38,7 @@ class AboutPageController extends Controller
             $imageName = time().'_'.$file->getClientOriginalName();
             $file->move(\public_path('images/gallery/'), $imageName);
 
-            AboutPage::create([
+            Service::create([
                 'section_desc' => $request->section_desc,
                 'section_heading' => $request->section_heading,
                 'body' => $request->body,
@@ -49,7 +49,7 @@ class AboutPageController extends Controller
                 'user' => $request->user,
             ]);
         } else {
-            AboutPage::create([
+            Service::create([
                 'section_desc' => $request->section_desc,
                 'section_heading' => $request->section_heading,
                 'body' => $request->body,
@@ -62,13 +62,13 @@ class AboutPageController extends Controller
         }
         session()->flash('message', $request->section_desc . ' successfully saved');
 
-        return redirect()->route('about.index');
+        return redirect()->route('services.index');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(AboutPage $aboutPage)
+    public function show(Service $service)
     {
         //
     }
@@ -76,19 +76,19 @@ class AboutPageController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(AboutPage $about)
+    public function edit(Service $service)
     {
-        return view('authorized.about.edit', compact('about'));
+        return view('authorized.services.edit', compact('service'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateAboutPageRequest $request, AboutPage $about)
+    public function update(UpdateServiceRequest $request, Service $service)
     {
         $request->validated();
 
-        $about->update([
+        $service->update([
             'section_desc' => $request->input('section_desc'),
             'section_heading' => $request->input('section_heading'),
             'body' => $request->input('body'),
@@ -99,24 +99,24 @@ class AboutPageController extends Controller
             'cover' => 'just test',
         ]);
 
-        session()->flash('message',  'About info with id : ' . $about->id . ' successfully updated');
+        session()->flash('message',  'Services info with id : ' . $service->id . ' successfully updated');
 
-        return redirect()->route('about.index');
+        return redirect()->route('services.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(AboutPage $about)
+    public function destroy(Service $service)
     {
-        $itemId = $about->id;
-        if (File::exists("images/gallery/" . $about->cover)) {
-            File::delete("images/gallery/" . $about->cover);
+        $itemId = $service->id;
+        if (File::exists("images/gallery/" . $service->cover)) {
+            File::delete("images/gallery/" . $service->cover);
         }
 
-        $about->delete();
+        $service->delete();
 
-        session()->flash('message', 'About info with id : ' .$itemId . ' successfully deleted');
+        session()->flash('message', 'Services info with id : ' .$itemId . ' successfully deleted');
         
         return redirect()->route('about.index');
     }

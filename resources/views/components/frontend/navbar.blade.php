@@ -18,7 +18,7 @@
                     <x-nav-link href="{{ route('navAbout') }}" :active="request()->routeIs('navAbout')">
                         {{ __('Apie Mus') }}
                     </x-nav-link>
-                    <x-nav-link href="{{ route('services') }}" :active="request()->routeIs('services')">
+                    <x-nav-link href="{{ route('navServices') }}" :active="request()->routeIs('navServices')">
                         {{ __('Paslaugos') }}
                     </x-nav-link>
                     <x-nav-link href="{{ route('frontendGallery') }}" :active="request()->routeIs('frontendGallery')">

@@ -7,6 +7,8 @@ use App\Models\AboutPage;
 use App\Models\Contact;
 use App\Models\Gallery;
 use App\Models\Page;
+use App\Models\Service;
+
 // use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -34,8 +36,9 @@ class HomeController extends Controller
 
     public function services()
     {
+        $services = Service::all();
         $contacts = Contact::orderby('created_at', 'desc')->first();
-        return view('frontend.services', compact('contacts'));
+        return view('frontend.services', compact('contacts', 'services'));
     }
 
     public function frontendGallery()
