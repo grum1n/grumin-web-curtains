@@ -1,20 +1,19 @@
 <?php
 
-namespace App\View\Components\Frontend;
+namespace App\View\Components;
 
-use App\Models\Contact;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class AppLogo extends Component
+class GatesLayout extends Component
 {
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
-       //
+        //
     }
 
     /**
@@ -22,8 +21,6 @@ class AppLogo extends Component
      */
     public function render(): View|Closure|string
     {
-        $contacts = Contact::orderby('created_at', 'desc')->first();
-        
-        return view('components.frontend.app-logo', compact('contacts'));
+        return view('layouts.gates-layout');
     }
 }
