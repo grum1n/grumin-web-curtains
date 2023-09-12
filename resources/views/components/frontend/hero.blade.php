@@ -21,7 +21,7 @@
         @foreach ($servicesPages as $servicesPage)
 
             <li class="w-80 px-3 pt-5 pb-3 text-left">
-                <a href="{{ route('frontendNavLink', $servicesPage->id) }}" class="block relative m-0 h-11 border-b-2 border-green-700 text-stone-800 hover:text-stone-500 cursor-pointer">
+                <a href="{{ route('frontendNavLink', $servicesPage->id) }}" class="block relative m-0 h-11 border-b-2 border-green-700 text-gray-900 hover:text-lime-700 cursor-pointer no-underline">
                     <h1 class="m-0 text-3xl font-normal font-serif">{{ $servicesPage->name }}</h1>
                 </a>
                 <h2 class="pt-3 text-stone-600 text-md">

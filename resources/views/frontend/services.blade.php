@@ -30,37 +30,37 @@
         <div class="mx-auto container flex flex-col items-center gap-16">
             <h3 class="text-stone-600 text-3xl border-b-2 border-green-700">Veikla</h3>
             <h1 class="text-center text-stone-800 text-4xl">Mūsų produktai</h1>
-            <ul class="w-full flex justify-around items-center flex-wrap gap-8 my-16">
-                <li class="max-w-xs p-2 text-center">
-                    <a href="{{ route('home') }}" class="block ">
+            <ul class="w-full flex justify-around items-center flex-wrap gap-8 sm:gap-1 my-16">
+                <li class="max-w-[280px] p-2 text-center">
+                    <a href="{{ url('/frontend/pages/8') }}" class="block ">
                         <img src="{{ url('images/web/pagalves.jpg') }}" alt="Diondecor.lt | Aksesuarai" class="w-full h-full drop-shadow-lg hover:drop-shadow-xl p-1  rounded-full hover:grow hover:shadow-lg">
                     </a>
                     <h2 class="">
-                        <a href="{{ route('home') }}" class="text-2xl hover:text-gray-500 no-underline">Aksesuarai</a>
+                        <a href="{{ url('/frontend/pages/8') }}" class="text-2xl hover:text-lime-700 no-underline">Aksesuarai</a>
                     </h2>
                 </li>
-                <li class="max-w-xs p-2 text-center">
-                    <a href="{{ route('home') }}" class="block ">
+                <li class="max-w-[280px] p-2 text-center">
+                    <a href="{{ url('/frontend/pages/9') }}" class="block ">
                         <img src="{{ url('images/web/audiniai.jpg') }}" alt="Diondecor.lt | Audiniai" class="w-full h-full drop-shadow-lg hover:drop-shadow-xl p-1  rounded-full hover:grow hover:shadow-lg">
                     </a>
                     <h2 class="">
-                        <a href="{{ route('home') }}" class="text-2xl hover:text-gray-500 no-underline">Audiniai</a>
+                        <a href="{{ url('/frontend/pages/9') }}" class="text-2xl hover:text-lime-700 no-underline">Audiniai</a>
                     </h2>
                 </li>
-                <li class="max-w-xs p-2 text-center">
-                    <a href="{{ route('home') }}" class="block ">
+                <li class="max-w-[280px] p-2 text-center">
+                    <a href="{{ url('/frontend/pages/10') }}" class="block ">
                         <img src="{{ url('images/web/karnizai.jpg') }}" alt="Diondecor.lt | Karnizai" class="w-full h-full drop-shadow-lg hover:drop-shadow-xl p-1  rounded-full hover:grow hover:shadow-lg">
                     </a>
                     <h2 class="">
-                        <a href="{{ route('home') }}" class="text-2xl hover:text-gray-500 no-underline">Karnizai</a>
+                        <a href="{{ url('/frontend/pages/10') }}" class="text-2xl hover:text-lime-700 no-underline">Karnizai</a>
                     </h2>
                 </li>
-                <li class="max-w-xs p-2 text-center">
-                    <a href="{{ route('home') }}" class="block ">
+                <li class="max-w-[280px] p-2 text-center">
+                    <a href="{{ url('/frontend/pages/11') }}" class="block ">
                         <img src="{{ url('images/web/uzuolaidos.jpg') }}" alt="Diondecor.lt | Užuolaidos" class="w-full h-full drop-shadow-lg hover:drop-shadow-xl p-1  rounded-full hover:grow hover:shadow-lg">
                     </a>
                     <h2 class="text-center">
-                        <a href="{{ route('home') }}" class="text-2xl hover:text-gray-500 no-underline">Užuolaidos</a>
+                        <a href="{{ url('/frontend/pages/11') }}" class="text-2xl hover:text-lime-700 no-underline">Užuolaidos</a>
                     </h2>
                 </li>
             </ul>

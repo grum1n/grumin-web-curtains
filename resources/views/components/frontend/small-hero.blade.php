@@ -7,7 +7,7 @@
                 <h1 class="text-black text-5xl my-4 font-serif">{{ $name }}</h1>
                 <a 
                     href="{{ route('home') }}"
-                    class="text-xl text-stone-800 hover:text-stone-600  inline-block no-underline border-b border-gray-500 leading-relaxed hover:border-stone-300" 
+                    class="text-xl text-stone-800 hover:text-stone-600  inline-block no-underline border-b border-emerald-800 leading-relaxed hover:border-lime-700" 
                 >Pagrindinis </a>
             </div>
         </div>
