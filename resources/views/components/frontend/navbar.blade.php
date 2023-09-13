@@ -1,6 +1,15 @@
-<nav x-data="{ open: false }" class="fixed w-full top-0 md:pt-10 z-50" id="navigation">
+<nav 
+    x-data="{ open: false, scrollAtTop: true }" 
+    class="fixed w-full top-0 md:pt-10 z-50" 
+    :class="{ 'md:pt-0 bg-gradient-to-r from-emerald-950 to-lime-600' : !scrollAtTop }" 
+    @scroll.window="scrollAtTop = (window.pageYOffset > 50) ? false :true"
+    id="navigation"
+    >
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-0 bg-gradient-to-r from-emerald-950 to-lime-600 drop-shadow-[0_1px_0_rgba(0,0,0,0.25)]">
+    <div 
+        class="max-w-7xl mx-auto px-0 drop-shadow-[0_1px_0_rgba(0,0,0,0.25)]"
+        :class="scrollAtTop ? 'bg-gradient-to-r from-emerald-950 to-lime-600' : 'bg-transparent'"
+        >
         <div class="flex justify-between h-full">
             <div class="flex">
                 <!-- Logo -->

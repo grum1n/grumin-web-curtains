@@ -18,28 +18,25 @@ var swiper = new Swiper(".mySwiper", {
     keyboard: true,
 });
 
-// navigation action onscroll
+//navigation action onscroll
 window.onscroll = function() {scrollFunction()};
 let navigation = document.getElementById("navigation");
 let sticky = navigation.offsetTop;
 
 function scrollFunction() {
   if (window.scrollY > sticky) {
-      navigation.classList.add('transparent-header');
       if (
-        document.body.scrollTop > 20 ||
-        document.documentElement.scrollTop > 20
+        document.body.scrollTop > 50 ||
+        document.documentElement.scrollTop > 50
       ) {
         mybutton.classList.remove("hidden");
       } else {
         mybutton.classList.add("hidden");
       }
-  } else {
-    navigation.classList.remove('transparent-header');
-  }
+  } 
 }
 
-// Get the button
+//Get the button
 const mybutton = document.getElementById("btn-back-to-top");
 
 // When the user scrolls down 20px from the top of the document, show the button
