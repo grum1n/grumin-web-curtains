@@ -71,7 +71,7 @@
         </ul>
     </section>
 
-    <section class="w-full bg-gradient-to-r from-emerald-950 to-lime-600 p-12">
+    <section class="w-full bg-emerald-950 p-12">
         <div class="container mx-auto px-4 flex flex-wrap text-gray-50 items-center justify-center gap-2 text-xl">
             <h1 class=" font-medium font-serif">Curtains &copy; <?php echo date('Y'); ?></h1>
             <span class="block text-center">Visos teisės saugomos.</span>

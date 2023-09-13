@@ -42,13 +42,6 @@
 
 #    colors
 
-    //*  dashboard:
-
-    //natural-300
-    //amber-200
-    //teal-500
-    //teal-950
------------------
 
 #   install 
 

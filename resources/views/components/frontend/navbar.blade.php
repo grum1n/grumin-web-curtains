@@ -1,7 +1,7 @@
 <nav 
     x-data="{ open: false, scrollAtTop: true }" 
     class="fixed w-full top-0 md:pt-10 z-50" 
-    :class="{ 'md:pt-0 bg-gradient-to-r from-emerald-950 to-lime-600' : !scrollAtTop }" 
+    :class="{ 'pt-0 bg-gradient-to-r from-emerald-950 to-lime-600' : !scrollAtTop }" 
     @scroll.window="scrollAtTop = (window.pageYOffset > 50) ? false :true"
     id="navigation"
     >
